@@ -1,1 +1,2 @@
 # maven
+# sample java project
