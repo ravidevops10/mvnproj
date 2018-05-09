@@ -38,7 +38,7 @@
         <snapshotRepository>
             <id>deployment</id>
             <name>Internal Snapshot Releases</name>
-            <url>http://10.128.0.3:8081/nexus/content/repositories/snapshots/</url>
+            <url>http://http://104.198.185.83:8081/mvn-demo/</url>
         </snapshotRepository>
     </distributionManagement>
     <build>
