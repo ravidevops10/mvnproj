@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.javaee7.sample</groupId>
     <artifactId>javaee7-simple-sample</artifactId>
-   <version>1.6-SNAPSHOT</version>
+   <version>5.7.8-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>javaee7-simple-sample</name>
     <properties>
@@ -38,7 +38,7 @@
         <snapshotRepository>
             <id>deployment</id>
             <name>Internal Snapshot Releases</name>
-            <url>http://http://104.198.185.83:8081/mvn-demo/</url>
+            <url>http://18.216.53.23:/ravi/test/</url>
         </snapshotRepository>
     </distributionManagement>
     <build>
@@ -51,8 +51,26 @@
                     <configuration>
                         <source>1.7</source>
                         <target>1.7</target>
-                    </configuration>
-                </plugin>
+                   </configuration>
+               </plugin>
+                <plugin>
+                  <artifactId>maven-antrun-plugin</artifactId>
+                     <version>1.8</version>
+             <executions>
+          <execution>
+            <id>id.clean</id>
+            <phase> clean </phase>
+            <configuration>
+              <target>
+               <echo> using antrun plugin </echo>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
                 <plugin>
                     <artifactId>maven-war-plugin</artifactId>
                     <version>2.3</version>
