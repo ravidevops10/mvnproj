@@ -33,12 +33,12 @@
         <repository>
             <id>deployment</id>
             <name>Internal Releases</name>
-            <url>http://10.128.0.3:8081/nexus/content/repositories/releases/</url>
+            <url>http://localhost:9000/</url>
         </repository>
         <snapshotRepository>
             <id>deployment</id>
             <name>Internal Snapshot Releases</name>
-            <url>http://18.216.53.23:/ravi/test/</url>
+            <url>http://localhost:9000/</url>
         </snapshotRepository>
     </distributionManagement>
     <build>
@@ -53,6 +53,11 @@
                         <target>1.7</target>
                    </configuration>
                </plugin>
+              <plugin>
+        <groupId>org.sonarsource.scanner.maven</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>3.5.0.1254</version>
+      </plugin>
                 <plugin>
                   <artifactId>maven-antrun-plugin</artifactId>
                      <version>1.8</version>
